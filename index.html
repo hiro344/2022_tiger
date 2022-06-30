@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name=”viewport” content=”width=device-width,initial-scale=1.0″>
+    
+
+    <title>2022</title>
+    <!-- Import the component -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+
+    <style>
+
+      model-viewer{ width:100%;height: 1600px;}
+
+ 
+
+ #custom-ar-button {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 475px;
+  height: 250px;
+  box-sizing: border-box;
+    border-radius:55px;
+  background: rgb(66, 66, 66);
+  
+  position: absolute;
+top:42%;
+left: 50%;
+transform: translateX(-50%);
+ -webkit-transform: translateX(-50%);
+ -ms-transform: translateX(-50%);
+font-size: 60px;
+font-family: "arial";
+font-weight: 350;
+color: white;
+line-height: 1.5;
+border:none;
+box-shadow: 0 0 5px #1818187e;
+     
+transition: 1.0s ;
+		
+
+   
+    }
+    #custom-ar-button:hover {
+        opacity:0.5;}
+   
+      </style>
+
+
+
+
+    
+  </head>
+  
+  
+  <body>
+    
+    <model-viewer
+      ar
+      ar-modes="scene-viewer webxr quick-look"
+
+      
+     
+      reveal="manual"
+      src="tiger_2022.gltf"
+      ios-src="tiger_2022.usdz"
+      poster="poster.png"
+    
+      auto-rotate
+      camera-controls
+      
+      exposure= 1 
+      ar
+      shadow-intensity= 1 
+
+
+    > 
+    <button id="custom-ar-button" slot="ar-button">
+      <span class="material-icons"style="font-size:70px;">view_in_ar</span>&nbsp;
+      Start AR</button>
+
+
+  </model-viewer>
+
+
+
+    
+  </body>
+</html>
+
+
